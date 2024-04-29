@@ -1,0 +1,16 @@
+#Results:
+
+AutoML Regression 15 minute run R2 score: ~0.54
+
+
+##Classifier:
+
+LogisticRegression Accuracy: ~0.60
+
+BayesianRidge Accuracy: ~0.78
+
+XGBClassifier Accuracy: ~0.79
+
+SVC Accuracy: ~0.62
+
+AutoML Classifier 15 minute run Accuracy: ~0.87
