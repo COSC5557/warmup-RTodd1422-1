@@ -89,8 +89,8 @@ LR:
            1       0.64      0.25      0.36       215
 
     accuracy                           0.80       980
-   macro avg       0.73      0.60      0.62       980
-weighted avg       0.78      0.80      0.77       980
+    macro avg       0.73      0.60     0.62       980
+    weighted avg    0.78      0.80      0.77       980
 
 
 XGB:
@@ -100,8 +100,8 @@ XGB:
            1       0.77      0.64      0.70       215
 
     accuracy                           0.88       980
-   macro avg       0.84      0.79      0.81       980
-weighted avg       0.87      0.88      0.88       980
+    macro avg      0.84      0.79      0.81       980
+    weighted avg   0.87      0.88      0.88       980
 
 
 SVC:
@@ -111,5 +111,5 @@ SVC:
            1       0.66      0.27      0.39       215
 
     accuracy                           0.81       980
-   macro avg       0.74      0.62      0.64       980
-weighted avg       0.79      0.81      0.78       980
+    macro avg      0.74      0.62      0.64       980
+    weighted avg   0.79      0.81      0.78       980
