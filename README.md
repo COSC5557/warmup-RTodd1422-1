@@ -52,17 +52,13 @@ Scatterplot:
 
 ## Accuracy Scores
 LogisticRegression() : 
-
 Training Accuracy :  0.5978566903571284
 Validation Accuracy :  0.6036479708162336
 
 
-
 BayesianRidge() : 
-
 Training Accuracy :  0.779500401473417
 Validation Accuracy :  0.7825930992552059
-
 
 
 XGBClassifier(base_score=None, booster=None, callbacks=None,
@@ -76,14 +72,11 @@ XGBClassifier(base_score=None, booster=None, callbacks=None,
               min_child_weight=None, missing=nan, monotone_constraints=None,
               multi_strategy=None, n_estimators=None, n_jobs=None,
               num_parallel_tree=None, random_state=None, ...) : 
-              
 Training Accuracy :  0.9959615817860079
 Validation Accuracy :  0.7924608603131175
 
 
-
 SVC(probability=True) : 
-
 Training Accuracy :  0.6277971721637395
 Validation Accuracy :  0.6176014591883264
 
