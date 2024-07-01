@@ -70,6 +70,7 @@ XGBClassifier(base_score=None, booster=None, callbacks=None,
               min_child_weight=None, missing=nan, monotone_constraints=None,
               multi_strategy=None, n_estimators=None, n_jobs=None,
               num_parallel_tree=None, random_state=None, ...) : 
+              
 Training Accuracy :  0.9959615817860079
 Validation Accuracy :  0.7924608603131175
 
