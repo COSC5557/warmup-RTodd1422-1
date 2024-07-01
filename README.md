@@ -35,3 +35,74 @@ Next, I look at the correlation of the features so that I can see if there are h
 I then created a new binary target feature called high quality. If a wine's quality is over 6, then it is marked as a high quality wine. This allows all four of the models (Logistic Regression, BayesianRidge, XGBClassifier, and SVC) to be compared to each other directly. I recognize that this is unlikely to be ideal but I rationalized that by thinking that this is the warmup.
 
 I then split the dataset and then scale it using a MinMaxScaler. I then train the models and have each print out their training accuracy and validation accuracy using the roc_auc_score (area under curve) which is a decent way to score binary, multiclass, and multilabel models allowing them to be compared with an equivalent scoring method. To finish off the evaluation I then print the classification report for each model (except bayesian ridge, because it really didn't want to). From looking at all these outputs, it appears that the XGBClassifier scored the highest, but it also appears to have massively overfitted as it has a large difference between its training and validation accuracy. The other three models appear to avoided overfitting, but their scores are lower. In BayesianRidge's case it is only lower by a little bit. 
+
+# Output: 
+Histogram:
+![alt text](warmupHistogramWithoutDensity.png)
+
+Heatmap: 
+![alt text](warmupHeatmap.png)
+
+Scatterplot:
+![alt text](warmupQualityAlcoholScatterPlot.png)
+
+## Accuracy Scores
+LogisticRegression() : 
+Training Accuracy :  0.5978566903571284
+Validation Accuracy :  0.6036479708162336
+
+BayesianRidge() : 
+Training Accuracy :  0.779500401473417
+Validation Accuracy :  0.7825930992552059
+
+XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              gamma=None, grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=None, n_jobs=None,
+              num_parallel_tree=None, random_state=None, ...) : 
+Training Accuracy :  0.9959615817860079
+Validation Accuracy :  0.7924608603131175
+
+SVC(probability=True) : 
+Training Accuracy :  0.6277971721637395
+Validation Accuracy :  0.6176014591883264
+
+## Classification Reports
+
+LR: 
+              precision    recall  f1-score   support
+
+           0       0.82      0.96      0.88       765
+           1       0.64      0.25      0.36       215
+
+    accuracy                           0.80       980
+   macro avg       0.73      0.60      0.62       980
+weighted avg       0.78      0.80      0.77       980
+
+
+XGB:
+              precision    recall  f1-score   support
+
+           0       0.90      0.95      0.92       765
+           1       0.77      0.64      0.70       215
+
+    accuracy                           0.88       980
+   macro avg       0.84      0.79      0.81       980
+weighted avg       0.87      0.88      0.88       980
+
+
+SVC:
+              precision    recall  f1-score   support
+
+           0       0.82      0.96      0.89       765
+           1       0.66      0.27      0.39       215
+
+    accuracy                           0.81       980
+   macro avg       0.74      0.62      0.64       980
+weighted avg       0.79      0.81      0.78       980
