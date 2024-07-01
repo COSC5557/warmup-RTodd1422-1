@@ -37,13 +37,17 @@ I then created a new binary target feature called high quality. If a wine's qual
 I then split the dataset and then scale it using a MinMaxScaler. I then train the models and have each print out their training accuracy and validation accuracy using the roc_auc_score (area under curve) which is a decent way to score binary, multiclass, and multilabel models allowing them to be compared with an equivalent scoring method. To finish off the evaluation I then print the classification report for each model (except bayesian ridge, because it really didn't want to). From looking at all these outputs, it appears that the XGBClassifier scored the highest, but it also appears to have massively overfitted as it has a large difference between its training and validation accuracy. The other three models appear to avoided overfitting, but their scores are lower. In BayesianRidge's case it is only lower by a little bit. 
 
 # Output: 
+
 Histogram:
+
 ![alt text](warmupHistogramWithoutDensity.png)
 
 Heatmap: 
+
 ![alt text](warmupHeatmap.png)
 
 Scatterplot:
+
 ![alt text](warmupQualityAlcoholScatterPlot.png)
 
 ## Accuracy Scores
